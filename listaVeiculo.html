@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FVcar</title>
+</head>
+<body>
+<h1>Lista de veículos </h1>
+      ------------------------------------------<br>
+    {% for i in dados %}
+        Placa: {{ i.placa }} <br>
+        Modelo: {{ i.modelo }} <br>
+        Ano: {{ i.ano }}     <br>
+        Cor: {{ i.cor }}     <br>
+        KM: {{ i.km }}       <br>
+        Tipo: {{ i.tipo }}   <br>
+        Obs.: {{ i.obs }}    <br>
+        {% if i.foto %}
+            <img src="{{ i.foto.url}}"width= "200"/> <br>
+        {% endif %}
+        <a href="{% url 'url_atualizaVeiculo' i.pk %}">Atualiza</a> <br>
+        <a href="{% url 'url_deletaVeiculo' i.pk%}" onclick="return confirm('Você está certo disso?')">Excluir</a> <br>
+
+        ------------------------------------------<br>
+    {% endfor %}
+
+    <button onclick="location.href='{% url 'url_principal' %}'">Home</button>
+
+
+</body>
+</html>

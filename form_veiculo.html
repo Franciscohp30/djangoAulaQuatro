@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FVcar</title>
+</head>
+<body>
+
+    <h1> {{ acao }} </h1>
+
+   <form method="post" enctype="multipart/form-data">
+
+       {% csrf_token %}
+       {{ form.as_p }}
+
+       <button onclick="submit">Salvar</button>
+   </form>
+
+</body>
+</html>
