@@ -1,0 +1,17 @@
+Acessar o diretorio FV\FVcar\urls.py (abra algum aquivo.py)
+
+no terminal iremos ativar a venv:
+com o comando dir verificamos o diretorio atual 
+teremos que acessar a venv\Scripts\ e por fim digitar o 
+comando 
+
+>activate
+
+Depois iremos subir nosso servidor:
+deveremos acessar o projeto FVcar\ e digitar o seguinte comando
+
+>python manage.py runserver
+
+Para criar um super usuario:
+
+>python manage.py createsuperuser
